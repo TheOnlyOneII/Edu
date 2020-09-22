@@ -1,0 +1,8 @@
+访问等级
+resources->static->public
+
+首页只要叫index.html并且在resources目录下的public、static、public和就能识别
+一般放在static里面（和静态资源一起）
+
+在template目录下的所有页面，只能通过controller来跳转
+需要模板引擎的支持

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Hello
+        </h1>
+        <h2>
+            欢迎来到GLZ在线教学系统
+        </h2>
+        <!--        <button><a th:href="@{'/index/login'}">-->
+        <!--            进入系统-->
+        <!--        </a></button>-->
+        <input type="button" value="按钮" onclick="index();"/>
+    </body>
+    <script>
+        function index() {
+            $.ajax({
+                type: "Post",
+                url: "/index/login",      //你的controller地址
+                success: function (data) {
+                    console.info("success");
+                }
+            });
+        }
+    </script>
+</html>
